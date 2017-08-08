@@ -1,0 +1,148 @@
+@import "cc-ss_colors";
+
+/* Base Styles */
+
+body {
+  margin: 0;
+  padding: 0;
+
+  h1 {
+    font-family: "Vollkorn", serif;
+    color: $yellow;
+  }
+
+  p {
+    font-weight: 100;
+    color: $white;
+  }
+}
+
+/* Layout Styles */
+
+.l-overlay {
+  z-index: 1;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.l-text {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  z-index: 20;
+  background-color: $navy;
+  max-width: 28%;
+  padding: 2%;
+  float: left;
+  text-align: center;
+  border-radius: 4%;
+  border: 4px solid hsl(40deg, 100%, 55%);
+}
+
+#fact1 {
+  -webkit-animation: inOut 7s;
+  animation: inOut 7s;
+  margin-left: 2em;
+  margin-top: 2em;
+}
+
+#fact2 {
+  -webkit-animation: inOut 9s 9s 1;
+  animation: inOut 9s 9s 1;
+  float: right;
+  margin-right: 3em;
+  margin-top: 3em;
+}
+
+#fact3 {
+  -webkit-animation: inOut 6s 25s 1;
+  animation: inOut 6s 25s 1;
+  position: absolute;
+  top: 2em;
+  left: 3em;
+}
+
+#fact4 {
+  -webkit-animation: inOut 6s 38.5s 1;
+  animation: inOut 6s 38.5s 1;
+  position: absolute;
+  bottom: 10em;
+  left: 2em;
+}
+
+#fact5 {
+  -webkit-animation: inOut 5.5s 47s 1;
+  animation: inOut 5.5s 47s 1;
+  position: absolute;
+  bottom: 5em;
+  left: 1em;
+}
+
+video {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 75%;
+  width: 100%;
+  color: lighten($gray, 30%);
+  font-weight: 100;
+  background-color: hsl(40deg, 100%, 55%);
+}
+
+/* Module Styles */
+
+.overlay {
+  background-color: hsl(27deg, 20%, 15%);
+  opacity: 0.3;
+}
+
+/* Animations */
+
+@-webkit-keyframes inOut {
+  0%,
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  50% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes inOut {
+  0%,
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  50% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
